@@ -1,5 +1,8 @@
 @wrapMethod(W3Container) function PlayQuestItemFx() {
-    if (false) {
+    var shouldSparkle: bool = theGame.GetInGameConfigWrapper().GetVarValue('InteractSparkle', 'QuestShouldSparkle');
+    
+    if (shouldSparkle) {
         return wrappedMethod();
     }
+    theGame.GetStashInv();
 }

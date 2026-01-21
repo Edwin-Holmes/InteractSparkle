@@ -1,5 +1,7 @@
 @wrapMethod(W3ActorRemains) function OnFocusModeEnabled( enabled : bool ){
-    if (false) {
+    var shouldSparkle: bool = theGame.GetInGameConfigWrapper().GetVarValue('InteractSparkle', 'LootShouldSparkle');
+    
+    if (shouldSparkle) {
         return wrappedMethod(enabled);
     }
 }
