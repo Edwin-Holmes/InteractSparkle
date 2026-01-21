@@ -4,5 +4,4 @@
     if (shouldSparkle) {
         return wrappedMethod();
     }
-    theGame.GetStashInv();
 }
