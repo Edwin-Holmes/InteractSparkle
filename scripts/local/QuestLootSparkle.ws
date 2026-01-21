@@ -2,6 +2,6 @@
     var shouldSparkle: bool = theGame.GetInGameConfigWrapper().GetVarValue('InteractSparkle', 'QuestShouldSparkle');
     
     if (shouldSparkle) {
-        return wrappedMethod();
+        wrappedMethod();
     }
 }
