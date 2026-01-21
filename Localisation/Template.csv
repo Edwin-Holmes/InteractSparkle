@@ -1,0 +1,20 @@
+;meta[language=en]
+; id      |key(hex)|key(str)| text
+;
+; comment lines use ; as first character
+; all comment lines (except the two line header) will be ignored
+;
+211xxxx000|        ||This string is accessible only by its id 211xxxx000
+;
+; w3strings.exe --encode CombatResources.w3strings.csv --force-ignore-id-space-check-i-know-what-i-am-doing
+; example: key strings, useable characters: a-z0-9_       id=0616
+;
+; Main Menu
+211xxxx001||panel_mods|Mods
+; Mod Menu
+211xxxx002||panel_My_Mod_Menu_Name|
+211xxxx003||preset_mods_Box_Above_Presets|
+211xxxx004||preset_value_Preset_Box_Name|
+211xxxx005||option_Slider/Toggle_Name|
+; Options Array Values
+211xxxx017||preset_value_Slider_Position_Name|
