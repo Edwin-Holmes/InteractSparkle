@@ -7,8 +7,10 @@
 }
 
 @wrapMethod(CR4IngameMenu) function OnClosingMenu() {
-    if (thePlayer) {
-        thePlayer.uitInteractDist = StringToFloat(theGame.GetInGameConfigWrapper().GetVarValue('UITweaks', 'InteractDistance'), 3.5);
+    var player: CR4Player;
+    player = (CR4Player)thePlayer;
+    if (player) {
+        player.uitInteractDist = StringToFloat(theGame.GetInGameConfigWrapper().GetVarValue('UITweaks', 'InteractDistance'), 3.5);
     }
 
     return wrappedMethod();
@@ -17,4 +19,14 @@
 @wrapMethod(CR4Player) function OnPlayerTickTimer( deltaTime : float ) {
     this.interactDist = this.uitInteractDist;
     wrappedMethod(deltaTime);
+}
+
+@wrapMethod(CR4HudModuleInteractions) function GetFocusInteractionRadius() : float {
+    var myInteractRadius: float;
+    myInteractRadius = StringToFloat(theGame.GetInGameConfigWrapper().GetVarValue('UITweaks', 'InteractDistance'), 3.5);
+    if (false) {
+        return wrappedMethod();
+    }
+
+    return uitInteractRadius;
 }
