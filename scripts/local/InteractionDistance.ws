@@ -8,7 +8,7 @@
 
 @wrapMethod(CR4IngameMenu) function OnClosingMenu() {
     if (thePlayer) {
-        uitInteractDist = StringToFloat(theGame.GetInGameConfigWrapper().GetVarValue('UITweaks', 'InteractDistance'), 3.5);
+        thePlayer.uitInteractDist = StringToFloat(theGame.GetInGameConfigWrapper().GetVarValue('UITweaks', 'InteractDistance'), 3.5);
     }
 
     return wrappedMethod();
