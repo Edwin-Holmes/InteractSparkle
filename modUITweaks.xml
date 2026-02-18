@@ -8,13 +8,15 @@
                 <Entry varId="QuestShouldSparkle" value="false"/>
                 <Entry varId="DisableItemQuantity" value="false"/>
                 <Entry varId="DisableSingleTapHorse" value="false"/>
+                <Entry varId="LightAttackReduction" value="33"/>
             </Preset>
             <Preset id="1" displayName="UI_Tweaks_Vanilla">
                 <Entry varId="InteractDistance" value="3.5"/>
                 <Entry varId="LootShouldSparkle" value="true"/>
                 <Entry varId="QuestShouldSparkle" value="true"/>
                 <Entry varId="DisableItemQuantity" value="true"/>
-                <Entry varId="DisableItemQuantity" value="true"/>
+                <Entry varId="DisableSingleTapHorse" value="true"/>
+                <Entry varId="LightAttackReduction" value="0"/>
             </Preset>
         </PresetsArray>
         <VisibleVars>
@@ -32,6 +34,10 @@
             <Var id="Separator" displayName="" displayType="SUBTLE_SEPARATOR"/>
 
             <Var id= "DisableSingleTapHorse" displayName="Disable_Single_Tap_Horse" displayType="TOGGLE"/>
+
+            <Var id="Separator" displayName="" displayType="SUBTLE_SEPARATOR"/>
+
+            <Var id= "LightAttackReduction" displayName="Light_Attack_Reduction" displayType="SLIDER;0;100;100"/>
         </VisibleVars>
     </Group>
 </UserConfig>
